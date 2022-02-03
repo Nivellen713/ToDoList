@@ -1,0 +1,21 @@
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="ToDoList">
+        <complexType>
+            <sequence>
+                <element name="Task" maxOccurs="unbounded" minOccurs="0">
+                    <complexType>
+                        <sequence>
+                            <element type="string" name="Description"/>
+                            <element type="byte" name="Priority"/>
+                            <element type="date" name="Deadline"/>
+                            <element type="string" name="Status"/>
+                            <element type="date" name="Complete" minOccurs="0"/>
+                        </sequence>
+                        <attribute type="int" name="id" use="optional"/>
+                        <attribute type="string" name="caption" use="optional"/>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
